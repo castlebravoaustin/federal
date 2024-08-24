@@ -6,41 +6,90 @@
     <title>federal</title>
     <link rel="icon" type="image/x-icon" href="6mh.gif">
     <style>
-
         body {
-    margin: 0;
-    height: 100vh;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #7700ff;
-    font-family: monospace;
-}
+            margin: 0;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7700ff;
+            font-family: monospace;
+            overflow: hidden;
+        }
 
-.container {
-    text-align: center;
-}
+        .loading-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 9999;
+            animation: swipeUp 1s ease-in-out 4s forwards;
+        }
 
-.ascii-art {
-    color: #7700ff;
-    margin-bottom: 20px;
-}
+        .loading-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-.links a {
-    color: #7700ff;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-}
+        .loading-animation {
+            border: 4px solid black;
+            border-top: 4px solid #7700ff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
 
-.links a:hover {
-    text-decoration: underline;
-}
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
+        @keyframes swipeUp {
+            to { transform: translateY(-100%); }
+        }
+
+        .container {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 4s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .ascii-art {
+            color: #7700ff;
+            margin-bottom: 20px;
+        }
+
+        .links a {
+            color: #7700ff;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <div class="loading-screen">
+        <div class="loading-text">Federal.bid</div>
+        <div class="loading-animation"></div>
+    </div>
+
     <div class="container">
         <div class="ascii-art">
             <pre>
@@ -58,7 +107,7 @@
             </pre>
         </div>
         <div class="links">
-            <a href="https://federal.bid/pgp.txt" target="_blank">PGP</a>
+            <a href="https://federal.bid/pgp.txt">PGP</a>
             <a href="https://breachforums.st/User-gay" target="_blank">BreachForums</a>
             <a href="https://x.com/dreg" target="_blank">Twitter</a>
         </div>
