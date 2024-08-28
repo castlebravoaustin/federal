@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/policia
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://federal.bid
+  * I am policia (https://keybase.io/policia) on keybase.
+  * I have a public key ASC4ZKbnyBGwQmgeQNdv77_XbaE_wHCnF3PuUzijVwcxGAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b864a6e7c811b042681e40d76fefbfd76da13fc070a71773ee5338a3570731180a",
+      "host": "keybase.io",
+      "kid": "0120b864a6e7c811b042681e40d76fefbfd76da13fc070a71773ee5338a3570731180a",
+      "uid": "ea9f7b4c3043f9cbc865c4eccbd66719",
+      "username": "policia"
+    },
+    "merkle_root": {
+      "ctime": 1724817497,
+      "hash": "4b89817730793ef06582a8070da1fab797e0c92f5f4ad5750efa60fccb5c8e8ae54f74518c60ca1d822307521e8db75d6101ca15511db8578e31b89cef109feb",
+      "hash_meta": "d68ae20fceb509658a7ba689ea13ce17e737a00f7463b89353bb35a62bb8c356",
+      "seqno": 26049347
+    },
+    "service": {
+      "entropy": "vuY3VzeWjUHd2vE1j5iS6geF",
+      "hostname": "federal.bid",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.4.0"
+  },
+  "ctime": 1724817689,
+  "expire_in": 504576000,
+  "prev": "bd7a2b5b5c8a30c67ebc83af569ebb6cf6ea830bea768be6e141d7285954f283",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEguGSm58gRsEJoHkDXb++/122hP8Bwpxdz7lM4o1cHMRgKp3BheWxvYWTESpcCBMQgvXorW1yKMMZ+vIOvVp67bPbqgwvqdovm4UHXKFlU8oPEIHFpMrY/JSYM/abstnCkqmsG/zBqQXbO+aDWm+Qibkp3AgHCo3NpZ8RALGlZQ1g6+P0jwM1mZBI2bkTpgZhX5VlFHWfVC8SOVnnxLb5sNsRumlx9URJ9+K1CJXy5Vo6wk87h6+fHaUVNCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIB/3wF/6+bq5OG3kL5Znid1gP+vOL9gWOQm2ln4bP6NVo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/policia
+
+==================================================================
