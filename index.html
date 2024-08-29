@@ -16,6 +16,7 @@
             color: #7700ff;
             font-family: monospace;
             overflow: hidden;
+            position: relative;
         }
 
         .loading-screen {
@@ -61,6 +62,7 @@
             text-align: center;
             opacity: 0;
             animation: fadeIn 1s ease-in-out 4s forwards;
+            z-index: 1;
         }
 
         @keyframes fadeIn {
@@ -82,14 +84,21 @@
         .links a:hover {
             text-decoration: underline;
         }
+
+        /* Hide the YouTube player */
+        #youtube-player {
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
     <div class="loading-screen">
         <div class="loading-text">Federal.bid</div>
         <div class="loading-animation"></div>
     </div>
 
+    <!-- Main Content -->
     <div class="container">
         <div class="ascii-art">
             <pre>
@@ -112,5 +121,43 @@
             <a href="https://x.com/dreg" target="_blank">Twitter</a>
         </div>
     </div>
+
+    <!-- YouTube Player -->
+    <div id="youtube-player"></div>
+
+    <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Create an <iframe> (and YouTube player) after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '0',
+                width: '0',
+                videoId: 'https://youtu.be/n61ULEU7CO0?si=hyhVo65BBWqqPigT', // Replace with your video ID
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 0,
+                    'loop': 1,
+                    'playlist': 'https://youtu.be/n61ULEU7CO0?si=hyhVo65BBWqqPigT', // Ensure the video loops
+                    'mute': 0
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        // The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            // Set volume to a lower level
+            event.target.setVolume(20); // Volume level between 0 and 100
+            event.target.playVideo();
+        }
+    </script>
 </body>
 </html>
